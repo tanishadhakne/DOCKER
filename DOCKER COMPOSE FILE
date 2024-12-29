@@ -1,0 +1,54 @@
+Docker compose
+
+sudo service docker start
+sudo su
+-download docker compose
+curl -SL https://github.com/docker/compose/releases/download/v2.30.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-composedocker-compose -v
+mkdir compose
+nano wp.yml
+      ----version: '3.9'
+          services:
+                  db:
+                     image: mysql
+                     ports:
+                          - 3306
+                     volumes:
+                          - myvol:/var/lib/sql
+                     networks:
+                          - mynet
+                     environments:
+                          - MYSQL_ROOT_PASSWORD=Pass@123
+                          - MYSQL_DATABASE=wordpressdb
+          
+                  website:
+                     image: wordpress
+                     ports:
+                          - 80:80
+                     networks:
+                          - mynet
+                     environments:
+                          - WORDPRESS_DB_HOST=db
+                          - WORDPRESS_DB_USER=root
+                          - WORDPRESS_DB_PASSWORD=Pass@123
+                          - WORDPRESS_DB_NAME=wordpressdb
+          
+          networks:
+             mynet:
+                driver: bridge
+          volumes:
+             myvol:
+ -save
+
+-creates image and container from ymlfile
+docker-compose -f wp.yml up
+
+-to list the service
+docker-compose -f wp.yml
+-to list the containers 
+docker ps 
+- to stops and removes containers, networks, volumes, and images
+docker-compose -f wp.yml down
+
+          
+          
