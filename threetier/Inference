@@ -1,0 +1,22 @@
+
+3-tier-architecture/
+├── web/
+│   ├── Dockerfile
+│   ├── index.html
+|   ├── default.conf
+├── app/
+│   ├── Dockerfile
+│   ├── myphpcode
+├── db/
+│   ├── Dockerfile
+│   ├── init.sql
+│   ├── init.sh
+└── docker-compose.yml
+
+sudo service docker start
+sudo su 
+cd /var/lib/docker
+cd threetier
+-to run and create threetier containers
+docker-compose up -d
+docker ps 
