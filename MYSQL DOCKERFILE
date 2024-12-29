@@ -1,0 +1,18 @@
+MYSQL DOCKERFILE
+
+mkdir mysql
+cd mysql
+nano dockerfile
+      ----FROM mysql
+          ENV MYSQL_ROOT_OASSWORD=
+          ENV MYSQL_DATABASE
+          EXPOSE 3306
+          CMD ["mysql"]
+    -save
+docker build -t mysql
+docker run -d -p80:80 --name mysqlapp
+docker ps
+docker exec -it mysqlapp /bin/bash
+mysql -u root-p
+password
+exit
