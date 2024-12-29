@@ -1,0 +1,17 @@
+--BUILD DOCKER FILE 
+mkdir test
+cd test
+nano dockerfile
+      -- FROM ubantu(os)
+         RUN apt update -y
+         RUN apt install nginx -y
+         RUN cd/var/www/html
+         RUN rm index.html 
+         RUN touch index.html
+         RUN echo "hi.."> index.html
+         CMD ["nginx","-g",'daemon off',"]
+    -save
+docker build .
+docker images
+docker run -d -p80:80 --name 
+docker ps
