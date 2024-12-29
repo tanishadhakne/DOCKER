@@ -1,0 +1,7 @@
+-root user
+sudo su
+
+- creates a WordPress container linked to a MySQL database container named wpsql,
+docker run -d -p80:80 -e WORDPRESS_DB_HOST=wpsql -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_NAME=wordpressdb -e WORDPRESS_DB_PASSWORD=pass123 --link wpsql:mysql --name wordpress wordpress
+-
+docker ps
