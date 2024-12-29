@@ -213,7 +213,8 @@ Feel free to open an **issue** or submit a **pull request**.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yourprofile) https://in.linkedin.com/in/tanisha-dhakne-245bb8229?trk=public_profile_browsemap 
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:youremail@example.com) dhaknetanisha@gmail.com
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:youremail@example.com) tanisha.github@gmail.com
+
 
 ---
 
